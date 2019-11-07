@@ -1,0 +1,11 @@
+Gustavo Felhberg - gfelhber - Homework 4
+
+Contributions:
+
+1 - Implemented the initial version of the Baseline. However, the AER Score was not good (around .6)
+
+2 - Tried to implement a HMM based on the following publications: "HMM-Based Word Alignment in Statistical Translation" (Vogel et al.), "Word Alignment for Statistical Machine Translation Using Hidden Markov Models" (Anahita Mansouri Bigvand) and "A novel alighment model inspired on IBM Model 1" (Rubio et al). However, I coundn't finish a working script
+
+3 - Implemented the homework improvement suggestion "Align using Pr(f∣e)  and also align using Pr(e∣f), then decode the best alignment using each model independently and then report the alignments that are the intersection of these two alignment sets". This was implemented over the baseline with some extensions developed by the group member Heikal and it was possible to improve the AER score in over 0.1, resulting in a score of 0.20 for 100,000 sentences. This implementation was used as the official submission of our team.
+
+

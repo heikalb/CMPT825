@@ -1,0 +1,18 @@
+# Misc rules
+1       TOP MiscP
+1       S2 MiscP
+1       DT MiscP
+1       NP MiscP
+1       ADVP MiscP
+1       ADJP MiscP
+1       PP MiscP
+1       VP MiscP
+1       MiscP Misc
+1       TOP MiscP S2
+1       MiscP DT MiscP
+1       MiscP NP MiscP
+1       MiscP MiscP ADVP
+1       MiscP ADJP MiscP
+1       MiscP MiscP PP
+1       MiscP VP MiscP
+1       MiscP Misc MiscP

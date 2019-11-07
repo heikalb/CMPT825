@@ -1,0 +1,87 @@
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Context Specific Text Summarization</title>
+
+    <link rel="stylesheet" href="./static/lib/css/dc.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/freelancer.min.css" rel="stylesheet">
+  </head>
+
+  <body id='page-top'>
+
+    <!-- Navigation -->
+    <nav class="navbar bg-secondary text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger">Context Specific Text Summarization</a>
+      </div>
+    </nav>
+    <!--br-->
+
+    <div class="container">
+    <br>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-6">
+            <form  action="" method="post" role="form">
+            {{ form.csrf }}
+            <div class="form-group">
+                <label for="pretrained_model">Select a pre-trained model:</label>
+                <p>{{ form.pretrained_model }}<p>        
+                <label for="input_to_summarize">Enter text to summarize:</label>
+                {{ form.input_to_summarize(rows='10',cols='100')}}
+                <br>
+                <center>
+                    <button type="submit" class="btn btn-success">Summarize</button>
+                </center>
+                <br>
+                <label for="model_message">Selected Model:</label>
+                <label id = "model-message-content" class="container">{{ model_message }}</label>
+                <br>
+                <br>
+                <label for="summary">Summary:</label>
+                <label id = "summary-content" class="container">{{ result }}</label>
+                <br>
+	</div>
+        <br>													   
+
+      </form>
+      <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+        {% for message in messages %}
+            {% if valid == 0 %}
+                <div class="alert alert-danger">
+                <strong>Error! </strong> {{ message[1] }}
+                </div>
+            {% endif %}
+
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <p>
+
+        </p>
+    </div>
+    <br>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+Gustavo Felhberg, gfelhber, Homework 3
+
+Contributions:
+
+1 - Implemented the improvement for the Baseline using the averaged perceptron algorithm described in Sarkar 2011. I have implemented the more efficient version (page 38). The results are good, reaching 93.52 as the F1 score using the full dataset for training.
+
+This implementation was chosen to be submitted as the official result of this homework.

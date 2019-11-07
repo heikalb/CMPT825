@@ -1,0 +1,13 @@
+Heikal Badrulhisham, hbadrulh, Homework 3
+
+Contributions:
+
+1) Implemented the baseline solution as described on the Homework 3 website
+
+2) Experimented with the following extensions of the baseline:
+
+a) Recycling training data: it was found that there is a set chunk tags that were more error-prone than others, such as chunk tags involving ADVPs, ADJPs, SBARs. In one experiment, training data containing these tags were duplicated in the training dataset. In effect, these data got more training epochs than data for which the system was already learning well. The idea is that the system gets more opportunity to learn on the error-prone data. However, this did not lead to a performance improvement. This is demonstrated in chunk_heikal_recycle.ipynb.
+
+b) Variable update values: in this experiment, instead of rewarding/penalizing the right/wrong features by +1/-1 as in the baseline, the update values are variable according to the current feature. A method is implemented (get_update()), which returns a pair of numbers, which are the absolute update values for the right or wrong feature respectively. In general, the magnitude of the update values are higher for certain feature types, such as 'B' or 'U12'. Some features experimented did not lead to a performance improvement, but some do. The most helpful features are the ones that are related to word categories rather than specific lexical items. The final combination of conditions lead to an F1 improvement less than 1. Another facet of this experiment is having variable magnitude of update values for rewarding or penalizing features. It was found that this is not helpful  and it is better to just have both update values having the same magnitude. This is demonstrated in chunk_heikal_variable_update.ipynb.
+
+c) Complementary system: in this experiment the baseline perceptron algorithm was combined with the average perceptron as implemented in chunk_gustavo.ipynb. The feature vector is obtained through the first algorithm and then passed to the second one, which outputs the final feature vector. The training data were also divided between the two training models. Experimentation was done with only part of the full dataset because the second algorithm is time consuming. However, the result was not promising to motivate using the full dataset. This is demonstrated in chunk_heikal_combine.ipynb.

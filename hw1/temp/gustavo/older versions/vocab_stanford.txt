@@ -1,0 +1,4 @@
+1	DT	the
+1	NNP	Arthur
+1	VBG	King
+1	VBZ	is

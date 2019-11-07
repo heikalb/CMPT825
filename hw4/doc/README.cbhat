@@ -1,0 +1,6 @@
+Chithra Bhat, cbhat
+
+The best score we got was with align-g.py, but it didn't use initialization with LLR as LLR initialization took more time for training. 
+However, when LLR initialization was tested on a smaller subset of data the results were better. 
+I tried to make some code changes to this implementation and ran it on 100k sentences. But, I havent been able to run it successfully on 100k sentences.
+Also, I wasn't able to contribute much to this assignment. I was sick for a week and then later had problems with my laptop after upgrading to Mojave.

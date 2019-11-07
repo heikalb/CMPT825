@@ -1,0 +1,33 @@
+Heikal Badrulhisham, hbadrulh, Homework 4
+
+
+Contributions:
+
+
+1. Team member Gustavo Felhberg implemented a first approximation of the baseline training algorithm. However
+it yielded an abnormally high AER score (align-gustavo.py). I fixed some bugs in the implementation then the AER was at the
+level described in the homework webpage (align-h.py). The code was also compartmentalized.
+
+
+2. Experimented with add-n smoothing on the t(.|.) parameter in the training algorithm. This was found to improve
+AER score. Different values of n were also tested and 0.005 was found to be optimal (align-h.py).
+
+
+3. Implemented a method of initializing the t parameter with loglikelihood-ratio (LLR). This was found to improve
+AER score (_initialize_probs(), llr_score() in align-h.py), however, testing was only done on several thousand
+sentences because the ensuing training took an indefinitely long time. The method of initializing with LLR was
+later optimized. Originally, the initialization algorithm involved iterating through all words in the dataset
+for every word pair in t(.|.). The improvement over this is that every unique word in the dataset is associated
+with a list of indices of sentences where it occurs (get_occurrences in align-h.py). Thus, calculating the LLR score
+between two words only involves comparing the words' list of indices. This did indeed reduce running time and enabled
+testing with more sentences.
+
+
+4. Experimented with adding null words to each source sentence. This couldn't be made to result in an improvement in AER.
+
+
+5. Another initialization heuristic was devised. In this one, initialization only happens with pairs of words that
+actually occur in the same translation pairs. The initialization value is based partly on how many times a word pair
+co-occurs (initialize_probs() in align-h.py). This was found to result in a reduction of AER compared to the baseline
+initialization, but it is behind the LLR initialization. However, initializing this way resulted in running time faster
+than the case with baseline initialization and a vastly faster than LLR initialization.

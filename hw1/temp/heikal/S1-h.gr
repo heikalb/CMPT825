@@ -1,0 +1,83 @@
+# The start symbol is TOP.
+# Command: python3 pcfg_parse_gen.py -g temp/heikal/S1.gr temp/heikal/S2.gr temp/heikal/Vocab.gr -i < example_sentences.txt
+
+# These two rules are required; choose their weights carefully!
+1  TOP  S1
+100   TOP  S2
+
+# in case you use S1.gr by itself
+1   S2   S1
+
+# Sentence type
+2   S1      S1' Punctuation-.
+1   S1      S1'
+1   S1      S1-aint
+1   S1      S1'' Punctuation-.
+2   S1      Cleft-depP Cleft-mainP
+1   S1'     NounP VerbP
+2   S1'     NounP Verb-ditransP
+2   S1'     Verb-invP SUBJ-MOD
+2   S1'     NounP Verb-compP
+2   S1-aint NounP Be-aintP
+
+# To accommodate preposed adjuncts
+1   S1''    S1''-, S1'
+1   S1''-,  Adverb Punctuation-,
+1   S1''-,  PrepP Punctuation-,
+1   S1''-,  Verb-ingP Punctuation-,
+
+# Cleft sentences
+1   Cleft-depP  DummyPron CopulaP
+1   CopulaP     Copula NounP
+1   Cleft-mainP Comp-who VerbP
+
+# Noun phrase
+1   NounP   Det Noun
+1   NounP   Noun-prop
+1   NounP   Noun-prop Title-theP
+1   NounP   Pron-y' Pron-all
+
+# Past verbs
+1   VerbP   Verb-intrans
+1   VerbP   Verb-trans NounP
+
+# Non finite verb (for Yoda-speak)
+1   Verb-invP Verb-nonfinP Punctuation-,
+
+1   Verb-nonfinP    Verb-nonfin-intrans
+1   Verb-nonfinP    Verb-nonfin-trans NounP
+
+# Verbs that take an embedded clause
+1   Verb-compP   Verb-comp QuotP
+1   Verb-compP   Verb-comp CompP
+
+# Ditransitive verbs
+1   Verb-ditransP   Verb-ditrans Verb-ditrans'
+1   Verb-ditrans'   NounP Noun-ditrans-objectP
+1   Noun-ditrans-objectP    Det Noun-ditrans-object
+
+# -ing verbs
+1   Verb-ingP       Verb-ing
+
+# Preposition phrase
+1   PrepP    Prep NounP
+
+# Second part of Yoda-speak
+1   SUBJ-MOD    Pron Modal'
+1   Modal'      Modal
+1   Modal'      Modal Neg
+
+# Quoted sentence
+1   QuotP   Quot' Punctuation-"
+1   Quot'   Punctuation-" S1'
+
+# Complementizer phrase
+1   CompP   Comp S1'
+
+# Noun the Noun/Adj phrases (e.g.Puff the magic dragon)
+1   Title-theP  Det-the Noun
+1   Title-theP  Det-the Adj-cap
+
+# Predicate in ain't sentence
+1   Be-aintP    Neg-aint    NounP
+

@@ -1,0 +1,35 @@
+Heikal Badrulhisham (hbadrulh)
+
+Contributions:
+
+1. For every word in hw1/allowed_words.txt, at least one vocabulary rule is created. The part-of-speech tag for each
+word is obtained by looking up the word in three different tagged corpora. This was done with with the program
+build_vocab.py and the output is the Vocab-h.gr file. There were words for which a vocabulary rule could not be derived.
+These were saved in unvocabbed_words.txt. These words had to manually turned into vocab rules, and those were saved in
+manual_vocab.txt. build_vocab.py was edited so that these manually written vocabulary rules are added to the vocabulary.
+
+2. The Penn Treebank (sample of) was used to derive grammar rules. The rules are derived by recording parent-children
+relationships in the parse trees of the treebank. The frequencies of rules in the treebank then were used as weights
+for the corresponding rules. This was done with get_treebank_grammar.py, and the ouput is the S2-h.gr file.
+
+3. Misc rules were developed and added to the grammar. They are contained in misc_rules.txt. This is done upon
+understanding that the Misc rules may give the parser some degree of tolerance.
+
+4. Additional rules were extracted from the trees in hw1/devset.trees. These were derived in get_devset_rules.py and the
+rules were saved in devset_rules.txt and S2-devsetonly-h.gr. Rules were weighted by frequencies as well.
+
+5. I experimented with adding the devset-derived rules to the grammar. This resulted in a dramatic decrease in entropy
+when parsing the example sentences. However, removing the Treebank-derived rules and keeping the devset-derived rules
+resulted in an even lower entropy, and lower than what was achieved with the default files.
+
+6. Rules were developed for the S1-h.gr file for sampling sentences. These rules are designed to generate sentences
+with more challenging syntactic structures. These include:
+-cleft construction
+-preposed adjunct
+-complementizer phrases
+
+7. After comparing different branches of experiments within the group, the S1-h.gr, S2-h.gr and Vocab-h.gr were elected
+to be the grammar files for submission, and thus copied to hw1/
+
+Note: all files mentioned here are in /temp/heikal/ unless otherwise indicated. I wrote all of the Python programs
+mentioned here.

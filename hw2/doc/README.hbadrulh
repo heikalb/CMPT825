@@ -1,0 +1,32 @@
+Heikal Badrulhisham <hbadrulh@sfu.ca>
+
+1. Implemented the baseline solution as explained in the homework description by writing the main beam
+search algorithm and associated helper functions.
+
+2. Implemented improvements over the baseline solution namely obtaining an extension order such that each hypothesis
+expansion would result in a decipherment with the maximal ngrams. The first implementation gets the complete extension
+order before the beam search. Later Gustavo (gfelhber) implemented a method so that the extension order is obtained
+iteratively during beam search.
+
+3. Initially the English alphabet referred to by the beam search was in the traditional order ('abcd...'). The ordering
+of the letters was changed based on letter frequency in English.
+
+4. Experimented with using constraints based on English orthography. For example, in English writing the letter 'q' is
+always followed by 'u'. These constraints are derived from the Wikipedia corpus provided for the homework (done in
+orthography.py). Some of the constraints that were implemented and experimented with were:
+    -limits on the length of consecutive consonants or vowels. It was discovered that lengths of 3 and 4 is enough to
+    cover 99% cases of vowel and consonant sequences respectively.
+    -insisting that any consonant or vowel sequences in a potential decipherment must also occur in the Wikipedia corpus.
+    -these constraints were tested as outright ban or gradient penalties (more constraint violations lower
+    the score for a hypothesis in the beam search)
+
+Initially, these constraints seemed to help with the given cipher text, that is in the best decipherment there are fewer
+character sequences that are unreasonable in English orthography. However, performance deteriorated for a 1-to-1
+cipher text specially created. Because previously the system was fully accurate for 1-to-1 cipher, orthographic
+constraints were abandoned.
+
+5. Extension limits were changed from a fixed extension limit for all plaintext letters, to variable extension limits
+for each letter. More frequent English characters were given higher extension limits.
+
+The above work was done in ngram_solution.ipynb and baseline_sol.py as 'scratchpad' for my branch of experimentation,
+before the code is transferred to decipher.ipynb.

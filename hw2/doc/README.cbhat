@@ -1,0 +1,9 @@
+Chithra Bhat
+
+- I tested both NLM and Ngram solution for different beam sizes.
+- Initially, I was working on NLM solution. I could only test first line of zodiac cipher for a small beam size less than 20 given my hardware configuration. Dead kernel error would stop the execution after printing few characters. 
+- However, tried Python's Queue, threading, multiprocessing, subprocess to see NLM output. But, this approach didn't help. 
+- Also, the whole NLM process was taking too long. After several trials with different combinations and considering the huge amount of time for each test, we decided to focus only in the Ngram solution.
+- For Ngram I was able to run the code with a beam size upto 500. But, for every run even with same beam size and same cipher text, the output used to be different.And not readable.
+- So, I tried to add higher weights to some alphabets in order 'etanoi(highest weight) shrdul(second highest weight)'. However, this didn't improve the results much. 
+Ex: Even though the zodiac-408 cipher was not readable, cipher text for burgers would produce output history.The results were readable, but not similar to the expected plain text.

@@ -1,0 +1,8 @@
+Chithra Bhat, cbhat
+
+Contributions:
+
+Implemented the improvement for the Baseline algorithm using the averaged perceptron algorithm. 
+The algorithm runs slow. Took over 3 hours to train the model on dev.txt for 10 epochs. But the F1 score was higher than the baseline implementation. 
+Accuracy achieved was 95.52 and final F1 score was 93.44(Epochs = 10). 
+The implementation for average perceptron is demonstrated in chunk-chithra.ipynb file.

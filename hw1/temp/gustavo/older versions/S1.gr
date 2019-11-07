@@ -1,0 +1,25 @@
+# The start symbol is TOP.
+# Command: python3 pcfg_parse_gen.py -g temp/heikal/S1.gr temp/heikal/S2.gr temp/heikal/Vocab.gr -i < example_sentences.txt
+
+# These two rules are required; choose their weights carefully!
+0  TOP  S1
+100   TOP  S2
+
+# This is a very, very, very simple grammar to get you started.
+
+1   S1   NP VP
+1   S1   NP _VP
+1   _VP  VP Punc
+
+1   VP   VBZ NP
+
+20  NP   DT Nbar
+1   NP   NNP
+
+10  Nbar NN
+1   Nbar Nbar PP
+
+1   PP   IN NP
+
+# in case you use S1.gr by itself
+1   S2   Misc

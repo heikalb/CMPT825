@@ -1,0 +1,7 @@
+To download the pre-trained models, please use the following links:
+
+CNN Model: https://docs.google.com/uc?export=download&id=1QfGSztL1prAd_MT-6hclsgZ29wP_jj_W
+
+Daily Mail Model: https://docs.google.com/uc?export=download&id=1BC7B13k_bCZPhOQDS16QFlZxJtTcp9bz
+
+Gigaword Model: https://docs.google.com/uc?export=download&id=1vrGQNLv5ETNeys974WhCUa2Sg4betqtT

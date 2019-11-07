@@ -1,0 +1,12 @@
+To download the training data, please use the following links:
+
+CNN Model: https://docs.google.com/uc?export=download&id=1zb4PJDjpBW3Az6D3fm8RBgucpzvEC3o3
+
+Daily Mail Model: https://docs.google.com/uc?export=download&id=1_S5Z9ZcV_iyVRjCEWxI5NPbZmjjbBIe0
+
+Gigaword Model: https://docs.google.com/uc?export=download&id=1bM4tlMwH6cdPeW5bkGHEDdj1lXD1jyMd
+
+
+To download the testing data, please use the following links:
+
+Google sentence compression dataset: https://drive.google.com/open?id=1nsWeHCUOAdrG_eBdHefKjlC7z9mShLsQ

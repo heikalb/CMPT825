@@ -1,0 +1,11 @@
+Gustavo Felhberg <gfelhber@sfu.ca>
+
+- Implemented the NLM solution (nlm_solution.ipynb). I've used the approach from the Thesis "Decipherment of Substitution Ciphers with Neural Language Models". I implemented the sampling using the method nlm.py/next_chars(). However, this process was taking too long, so I tried to reduce the sampling in a way that, instead of sampling the whole sentence for every new hypothesis, I tried to sample only the minimun lenght of the sentence that covers all the mapped characters for the current new hypothesis. After several trials with different combinations and considering the huge amount of time for each test (not using CPU), we decided to focus only in the Ngram solution.
+
+- Extended the PRUNING function in order to, instead of pruning the overall top N hypotheses, it prunes the top N for each branch of the generated tree of hypotheses combinations. However, this didn't improve the results
+
+- Implemented the improved EXT_ORDER selection (method update_ext_order()) using the description in section 5.2 from Improved Decipherment of Homophonic Ciphers. It reduced the decipherment of the 408-text to 2-3 minutes. The results are in part readable, but not similar to the expected plain text.
+
+- Implemented the improved EXT_LIMIT to be defined in the character level, meaning that each plain character can have its own limit
+
+- Updated the SCORE method to incorporate the changes in the EXT_ORDER and EXT_LIMIT modifications

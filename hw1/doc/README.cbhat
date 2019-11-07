@@ -1,0 +1,21 @@
+#### Chithra Bhat (cbhat)
+
+##### Contribution
+
+* For every word in Monty Python book, one rule was created.
+* To identify pos tags, multiple approaches were used such as Default tagging, RegexTagger, Unigram tagging, Bigram tagging and Trigram Tagging and a combination of taggers.  
+* I used treebank and brown corpus tagged sentences as training and tested with 50 random sentences from the internet. 
+* Because, the accuracy was slightly higher for brown corpus tagged sentences,I used brown corpus tagged sentences to train the model. 
+* Also, with trigram tagging, the scores were low on test set. So I used a combination of default tagging, regex, unigram and bigram tagging to train the model on brown corpus tagged sentences.  
+* Used sentences from "Monty Python and the Holy Grail" text as test set.
+* Identified POS tag for every word and saved it to Vocab file.
+* Read allowed_words.txt to see if there were any words for which a rule has not been assigned. The punctuation tags weren't correctly assigned. So modified it manually.
+* The brown corpus (sample of) was used to derive grammar rules
+* Extracted trees, converted to CNF, extracted the rules, frequencies of each rule.
+* Saved it to S2.gr.
+* Entropy score was -101.48. 
+
+* Documentation of the results
+
+**Obs 1:** After comparing the results of this parser and the Penn treebank, we decided to use as official results the Penn treebank rules.
+

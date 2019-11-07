@@ -1,0 +1,6 @@
+Helen Zhang (hyz1)
+
+-Experimented with parsing using Spacy
+-Manually make vocab rules for words that cannot be processed automatically
+-Experimented with manipulating rule weights: multiplying rules with weights more than 1
+-Experimented with a simplified tagset
