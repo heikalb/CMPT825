@@ -8,25 +8,37 @@ assignment:
 Warm-up assignment for familiarizing with submitting assignments through
 Gitlab.
 
+
 ## hw1: Context-free grammar and parsing
 The description of the assignment provided by the class is in `README.md`.
+
 My contribution to the project is documented in `doc/README.hbadrulh`. 
+
 
 ## hw2: Decipherment
 The description of the assignment provided by the class is in `README.md`.
+
 My contribution to the project is documented in `doc/README.hbadrulh`.
+
 The group's development process and solution are documented in `decipher
 .ipynb`.
 
+
 ## hw3: Phrasal chunking
 The description of the assignment provided by the class is in `README.md`.
+
 My contribution to the project is documented in `doc/README.hbadrulh`.
+
 The group's development process and solution are documented in `chunk.ipynb`.
+
 
 ## hw4: Word alignment
 The description of the assignment provided by the class is in `README.md`.
+
 My contribution to the project is documented in `doc/README.hbadrulh`.
+
 The group's development process and solution are documented in `align.ipynb`.
+
 
 ## project
 For the open-ended project component of the class we implemented a system of
