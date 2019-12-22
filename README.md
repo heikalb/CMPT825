@@ -44,9 +44,9 @@ The group's development process and solution are documented in `align.ipynb`.
 For the open-ended project component of the class we implemented a system of
 genre-sensitive text summarization. Instead of using one text summary model 
 to summarize any text input, our system consists of multiple text summary
- models, and each model is trained on specific text genres. When an input text 
+models, and each model is trained on specific text genres. When an input text 
 is given, the model to be used is chosen based on topic modelling of the
- input text.
+input text.
 
 The group's development process and solution are documented in `project.ipynb`.
 
