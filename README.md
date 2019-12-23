@@ -1,6 +1,6 @@
-# CMPT 825: Introduction to Artificial Intelligence
+# CMPT 825: Natural Language Processing
 This directory contains solutions written for assignments for a class, 
-CMPT 825: Natural Language Processing at Simon Fraser University, Fall 2018.
+CMPT 825: Natural Language Processing, at Simon Fraser University, Fall 2018.
 Each assignment was a group project. The following are descriptions of each
 assignment:
 
