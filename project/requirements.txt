@@ -1,7 +1,7 @@
 gensim==3.3.0
 wget==3.2
 nltk==3.4.5
-tensorflow==1.12.2
+tensorflow==2.6.4
 spacy==2.0.17
 flask==1.0.2
 wtforms==2.2.1
